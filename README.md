@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-[English](README_EN.md) | [Spanish](README_ES.md) | [French](README_FR.md) | [Malay](README_MS.md) | [Italian](README_IT.md)
-=======
+
 [English](/locales/en-US/README_EN.md) | [Spanish](/locales/es-ES/README_ES.md) | [French](/locales/fr-FR/README_FR.md) | [Malay](/locales/my-MY/README_MS.md)
->>>>>>> f772e6597a79ef653ea1b0d5658262df3b3ae8db
+
 
 # Calculadora Índice de Massa corporal - Calorias
 

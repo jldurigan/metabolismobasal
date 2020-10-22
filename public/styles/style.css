@@ -185,6 +185,7 @@ form.form .field-btn {
   width: 1em;
 }
 
+
 footer {
   padding: 20px;
   text-align: center;
@@ -214,7 +215,7 @@ footer {
   form.form {
     margin-bottom: 3rem;
   }
-  
+
 }
 
 @media (max-width: 415px) {
