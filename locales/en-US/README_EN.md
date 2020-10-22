@@ -12,7 +12,14 @@ Enter these following items:
 1 - Weight
 2 - Height
 3 - Rate of exercise
+
 4 - Sex (Male/Female)
+
+Formula
+
+
+=======
+4 - Gender (Male/Female)
 
 Formula
 
@@ -23,4 +30,8 @@ Formula
 Figure PNG
 
 - https://www.pngguru.com/free-transparent-background-png-clipart-mviok
+
 - https://www.pngegg.com/en/search?q=female+
+
+[Code of Conduct](https://github.com/adalbertobrant/metabolismobasal/blob/master/CODE_OF_CONDUCT.md)
+

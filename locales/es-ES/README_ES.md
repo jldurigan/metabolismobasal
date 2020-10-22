@@ -6,13 +6,17 @@
 
 # Calculadora de tasa metabólica basal
 
+
 Ingrese los siguientes elementos:
+
 
 1 - Edad
 1 - Peso
 2 - Altura
 3 - Tasa de ejercicio
-4 - Sexo (Masculino / Femenino)
+
+4 - Genero (Masculino / Femenino)
+
 
 Fórmula
 
@@ -22,4 +26,6 @@ Fórmula
 Figura PNG
 
 - https://www.pngguru.com/free-transparent-background-png-clipart-mviok
+
 - https://www.pngegg.com/en/search?q=female+
+
