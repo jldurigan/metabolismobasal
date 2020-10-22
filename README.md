@@ -1,4 +1,4 @@
-[English](README_EN.md) | [Spanish](README_ES.md) | [French](README_FR.md) | [Malay](README_MS.md)
+[English](/locales/en-US/README_EN.md) | [Spanish](/locales/es-ES/README_ES.md) | [French](/locales/fr-FR/README_FR.md) | [Malay](/locales/my-MY/README_MS.md)
 
 # Calculadora Índice de Massa corporal - Calorias
 
