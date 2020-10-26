@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="./public/images/favicon.png">
@@ -12,18 +12,19 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" type="text/css" href="./public/styles/style.css" />
-    <title>Calcolatore di Metabolismo Basale</title>
-    <script src="public/scripts/scripts.js"></script>
+    <title>Basal Metabolic Rate Calculator</title>
+    <script src="./public/scripts/scripts_en.js"></script>
   </head>
 
-  <body lang="it">
+  <body lang="en-US">
     <a href="index.html" target="_blank" title="Português">PT</a> |
     <a href="index_ES.html" target="_blank" title="Español">ES</a> |
     <a href="index_it.html" target="_blank" title="Italiano">IT</a> |
     <a href="index_en.html" target="_blank" title="English">EN</a>
     <header>
-      <h1 class="title">Calcolatore di Metabolismo Basale</h1>
+      <h1 class="title">Basal Metabolic Rate Calculator</h1>
       <img src="./public/images/calcCal.png" alt="calorias" class="logo" />
     </header>
 
@@ -31,15 +32,15 @@
       <form class="form" id="formulario" onsubmit="return calcular(event)">
         <fieldset>
           <div class="field-group">
-            <label for="genero">Sesso</label>
+            <label for="genero">Sex</label>
             <select name="genero" id="genero">
-              <option value="Feminino">Femminile</option>
-              <option value="Masculino">Maschile</option>
+              <option value="Feminino">Female</option>
+              <option value="Masculino">Male</option>
             </select>
           </div>
 
           <div class="field-group">
-            <label for="peso">Peso <small>(kg)</small></label>
+            <label for="peso">Weight <small>(lbs)</small></label>
             <input
               type="number"
               name="peso"
@@ -49,12 +50,12 @@
               size="4"
               autofocus
               required
-              placeholder="70"
+              placeholder="180"
             />
           </div>
 
           <div class="field-group">
-            <label for="altura">Altezza <small>(cm)</small></label>
+            <label for="altura">Height <small>(in)</small></label>
             <input
               type="number"
               name="altura"
@@ -63,12 +64,12 @@
               min="0"
               size="5"
               required
-              placeholder="170"
+              placeholder="67"
             />
           </div>
 
           <div class="field-group">
-            <label for="idade">Et&agrave; <small>(anni)</small></label>
+            <label for="idade">Age <small>(years)</small></label>
             <input
               type="number"
               name="idade"
@@ -82,7 +83,7 @@
           </div>
 
           <div class="field-btn">
-            <input type="submit" class="button" value="Calcola" />
+            <input type="submit" class="button" value="Calculate" />
           </div>
         </fieldset>
       </form>
@@ -92,64 +93,62 @@
           style="text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb"
           class="result"
         >
-          Il risultato &egrave; stato:
+          Your result is:
         </h2>
         <div class="result-list" id="result-data" style="visibility: hidden">
           <ul>
             <li>
-              Metabolismo Basale : <span id="metabolismo_basal"></span> cal
+              Basal Metabolism : <span id="metabolismo_basal"></span> cal
             </li>
+            <li>Sedentary : <span id="sedentario"></span> cal</li>
+            <li>Low intensity exercise : <span id="exercicio_leve"></span> cal</li>
             <li>
-              Sedentario con il telecomando : <span id="sedentario"></span> cal
+              Moderate exercise : <span id="exercicio_moderado"></span> cal
             </li>
-            <li>Esercizio leggero : <span id="exercicio_leve"></span> cal</li>
+            <li>Regular exercise : <span id="ativo"></span> cal</li>
             <li>
-              Esercizio moderato: <span id="exercicio_moderado"></span> cal
-            </li>
-            <li>Esercizio regolare : <span id="ativo"></span> cal</li>
-            <li>
-              Esercizio 2 ore al gioron : <span id="super_ativo"></span> cal
+              2 hours of exercise (1 day) : <span id="super_ativo"></span> cal
             </li>
           </ul>
           <h3 style="text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb">
-            Prendere Peso
+            Weight Gain
           </h3>
 
           <p>
-            Per aumentare di peso devi consumare ogni giorno
+            To gain weight you must consume every day
             <span id="ganhar_peso"></span> cal
           </p>
 
           <h3 style="text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb">
-            Perdere Peso
+            Weight Loss
           </h3>
 
           <p>
-            Per perdere peso è necessario consumare fino a
-            <span id="perder_peso"></span> cal
+            To lose weight you must consume up to
+            <span id="perder_peso"></span> cal every day
           </p>
         </div>
       </div>
     </main>
     <footer>
-    <div class="rodape">
-      <h4>Riferimenti</h4>
+      <div class="rodape">
+        <h4>References</h4>
         <ul>
           <li>
             <a href="https://www.leighpeele.com/mifflin-st-jeor-calculator"
-              ><i class="material-icons">article</i>Come viene calcolato</a
+              ><i class="material-icons">article</i>How does the calculation work?</a
             >
           </li>
           <li>
             <a
               href="https://www.scielo.br/pdf/abcd/v29n3/pt_0102-6720-abcd-29-03-00185.pdf"
-              ><i class="material-icons">article</i>Importanza dell'equazione di Harris-BENEDICT
+              ><i class="material-icons">article</i>IMPORTANCE OF THE EQUATION FROM HARRIS-BENEDICT
             </a>
           </li>
           <li>
             <a
               href="https://github.com/adalbertobrant/metabolismobasal/graphs/contributors"
-              ><i class="material-icons">article</i>Contributori
+              ><i class="material-icons">article</i>Contributors
             </a>
           </li>
         </ul>
