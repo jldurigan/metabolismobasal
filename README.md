@@ -1,5 +1,5 @@
 
-[English](/locales/en-US/README_EN.md) | [Spanish](/locales/es-ES/README_ES.md) | [French](/locales/fr-FR/README_FR.md) | [Malay](/locales/my-MY/README_MS.md) | [Polish](/locales/pl-PL/README_PL.md)
+[English](/locales/en-US/README_EN.md) | [Spanish](/locales/es-ES/README_ES.md) | [French](/locales/fr-FR/README_FR.md) | [Malay](/locales/my-MY/README_MS.md) | [Polish](/locales/pl-PL/README_PL.md) | [Japan](/locales/ja-JP/README_ja.md)
 
 
 # Calculadora Índice de Massa corporal - Calorias
