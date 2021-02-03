@@ -1,10 +1,8 @@
-<div style="text-align:center;">
-<img src="./public/images/calcCal.png" alt="metabolismo-basal-icon" style="width: 100px; height: 100px;">
+<p align="center"><img src="./public/images/calcCal.png" alt="metabolismo-basal-icon" width="300px"/></p>
 
-<h1>MetabolismoBasal</h1>
+# metabolismobasal
 
 [English](/locales/en-US/README_EN.md) | [Spanish](/locales/es-ES/README_ES.md) | [French](/locales/fr-FR/README_FR.md) | [Malay](/locales/my-MY/README_MS.md) | [Polish](/locales/pl-PL/README_PL.md) | [Japanese](/locales/ja-JP/README_ja.md) | [Italian](/locales/it-IT/README_IT.md)
-</div>
 
 # Calculadora Índice de Massa corporal - Calorias
 
