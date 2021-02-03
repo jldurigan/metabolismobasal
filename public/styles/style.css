@@ -22,12 +22,19 @@ body {
   margin: 0 auto;
   font-size: 16px;
 }
+
 a {
   text-decoration: none;
 }
+
 img {
   display: block;
   max-width: 100%;
+}
+
+.lan-bar-top {
+  display: flex;
+  justify-content: left;
 }
 
 .lan-bar {
@@ -48,8 +55,11 @@ img {
   border-radius: 22px;
   box-shadow: 1px 1px 1px 1px grey;
 }
+
 .lan-item:hover {
-  opacity: 0.5;
+  color: #fff;
+  background: #322153;
+  transition: 500ms;
 }
 
 ul {
@@ -67,7 +77,6 @@ header {
 header h1.title {
   font-size: 3.5rem;
   text-align: center;
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb;
   color: var(--purple);
 }
 
@@ -160,11 +169,26 @@ form.form .field-btn {
   transition: 0.3s all;
   outline: 0;
 }
+
 .button:hover {
   background-color: var(--purple);
+  transition: 500ms;
 }
 
 /* Resultado estilos */
+.result {
+  display: flex;
+  justify-content: center;
+}
+
+.result-list span {
+  color: #555;
+}
+
+.x-padd {
+  padding: 10px 0 0 0;
+}
+
 .resultado-container {
   background-color: var(--bg-form-color);
   padding: 1rem;
@@ -224,17 +248,44 @@ footer ul li a:hover {
   opacity: 0.5;
 }
 
+.beauty-shadow {
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb;
+}
+
+.text-center {
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.rodape {
+  display: inline-block;
+}
+
+/* .rodape ul li a i{
+  vertical-align: middle;
+}  */
+
+.material-icons {
+  vertical-align: middle;
+}
+
 /* Responsividade */
 @media (max-width: 1180px) {
   header h1.title {
     font-size: 2.5rem;
   }
 }
+
 @media (max-width: 888px) {
   header {
     display: flex;
     justify-content: space-around;
   }
+
   header h1.title {
     font-size: 2rem;
   }
@@ -255,5 +306,10 @@ footer ul li a:hover {
   .resultado-container {
     width: 100%;
     margin: 15px 0;
+  }
+
+  .lan-bar-top {
+    display: flex;
+    justify-content: center;
   }
 }
