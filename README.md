@@ -31,5 +31,10 @@
 
 - https://www.pngegg.com/en/search?q=female+
 
+<div style="text-align: center;">
+
+[Code of Conduct](CODE_OF_CONDUCT.md) | [LICENSE](LICENSE)
+
+</div>
 
 Give some stars folks :)
