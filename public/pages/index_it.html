@@ -1,189 +1,130 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./public/images/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <title>Calcolatore di Metabolismo Basale</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="public/styles/style.css" />
-    <link rel="icon" href="public/images/favicon.png" />
-    <script src="public/scripts/scripts.js"></script>
-  </head>
 
-  <body lang="it">
-    <a href="index.html" target="_blank" title="Português">PT</a> |
-    <a href="index_ES.html" target="_blank" title="Español">ES</a> |
-    <a href="index_it.html" target="_blank" title="Italiano">IT</a> |
-    <a href="index_en.html" target="_blank" title="English">EN</a>
-    <header>
-      <img src="./public/images/calcCal.png" alt="calorias" class="logo" />
-      <h1 class="title">Calcolatore di Metabolismo Basale</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./public/images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <main class="container">
-      <form class="form" id="formulario" onsubmit="return calcular(event)">
-        <fieldset>
-          <div class="field-group">
-            <label for="genero">Sesso</label>
-            <select name="genero" id="genero">
-              <option value="Feminino">Femminile</option>
-              <option value="Masculino">Maschile</option>
-            </select>
-          </div>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-          <div class="field-group">
-            <label for="peso">Peso <small>(kg)</small></label>
-            <input
-              type="number"
-              name="peso"
-              id="peso"
-              step="0.01"
-              min="0"
-              size="4"
-              autofocus
-              required
-              placeholder="70"
-            />
-          </div>
+  <title>Calcolatore di Metabolismo Basale</title>
 
-          <div class="field-group">
-            <label for="altura">Altezza <small>(cm)</small></label>
-            <input
-              type="number"
-              name="altura"
-              id="altura"
-              step="0.01"
-              min="0"
-              size="5"
-              required
-              placeholder="170"
-            />
-          </div>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../styles/style.css" />
 
-          <div class="field-group">
-            <label for="idade">Et&agrave; <small>(anni)</small></label>
-            <input
-              type="number"
-              name="idade"
-              id="idade"
-              step="0.01"
-              min="0"
-              size="4"
-              required
-              placeholder="25"
-            />
-          </div>
+  <link rel="icon" href="../images/favicon.png" />
+  <script src="../scripts/scripts.js"></script>
+</head>
 
-          <div class="field-btn">
-            <input type="submit" class="button" value="Calcola" />
-          </div>
-        </fieldset>
-      </form>
+<body lang="it">
+  <div class="lan-bar-top">
+    <a href="../../index.html" class="lan-item" target="_blank" title="PT">PT</a>
+    <a href="./index_ES.html" class="lan-item" target="_blank" title="ES">ES</a>
+    <a href="./index_it.html" class="lan-item" target="_blank" title="IT">IT</a>
+    <a href="./index_en.html" class="lan-item" target="_blank" title="EN">EN</a>
+  </div>
 
-      <div class="resultado-container" id="resultado">
-        <h2
-          style="text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb"
-          class="result"
-        >
-          Il risultato &egrave; stato:
-        </h2>
-        <div class="result-list" id="result-data" style="visibility: hidden">
-          <ul>
-            <li>
-              Metabolismo Basale : <span id="metabolismo_basal"></span> cal
-            </li>
-            <li>
-              Sedentario con il telecomando : <span id="sedentario"></span> cal
-            </li>
-            <li>Esercizio leggero : <span id="exercicio_leve"></span> cal</li>
-            <li>
-              Esercizio moderato: <span id="exercicio_moderado"></span> cal
-            </li>
-            <li>Esercizio regolare : <span id="ativo"></span> cal</li>
-            <li>
-              Esercizio 2 ore al gioron : <span id="super_ativo"></span> cal
-            </li>
-          </ul>
-          <h3 style="text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb">
-            Prendere Peso
-          </h3>
+  <header>
+    <img src="../images/calcCal.png" alt="calorias" class="logo" />
+    <h1 class="title beauty-shadow">Calcolatore di Metabolismo Basale</h1>
+  </header>
 
-          <p>
-            Per aumentare di peso devi consumare ogni giorno
-            <span id="ganhar_peso"></span> cal
-          </p>
-
-          <h3 style="text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb">
-            Perdere Peso
-          </h3>
-
-          <p>
-            Per perdere peso è necessario consumare fino a
-            <span id="perder_peso"></span> cal
-          </p>
+  <main class="container">
+    <form class="form" id="formulario" onsubmit="return calcular(event)">
+      <fieldset>
+        <div class="field-group">
+          <label for="genero">SESSO:</label>
+          <select name="genero" id="genero">
+            <option value="Feminino">Femminile</option>
+            <option value="Masculino">Maschile</option>
+          </select>
         </div>
+
+        <div class="field-group">
+          <label for="peso">PESO <small>(kg):</small></label>
+          <input type="number" name="peso" id="peso" step="0.01" min="0" size="4" autofocus required placeholder="70" />
+        </div>
+
+        <div class="field-group">
+          <label for="altura">ALTEZZA <small>(cm):</small></label>
+          <input type="number" name="altura" id="altura" step="0.01" min="0" size="5" required placeholder="170" />
+        </div>
+
+        <div class="field-group">
+          <label for="idade">ETÀ <small>(anni):</small></label>
+          <input type="number" name="idade" id="idade" step="0.01" min="0" size="4" required placeholder="25" />
+        </div>
+
+        <div class="field-btn">
+          <input type="submit" class="button" value="CALCOLA" />
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="resultado-container" id="resultado">
+      <h2 class="result">
+        IL RISULTATO È STATO:
+      </h2>
+      <div class="result-list" id="result-data" style="visibility: hidden">
+        <ul>
+          <li>Metabolismo Basale : <span id="metabolismo_basal"></span> cal</li>
+          <li>Sedentario con il telecomando : <span id="sedentario"></span> cal</li>
+          <li>Esercizio leggero : <span id="exercicio_leve"></span> cal</li>
+          <li>Esercizio moderato: <span id="exercicio_moderado"></span> cal</li>
+          <li>Esercizio regolare : <span id="ativo"></span> cal</li>
+          <li>Esercizio 2 ore al gioron : <span id="super_ativo"></span> cal</li>
+        </ul>
+        <h3 class="x-padd">
+          PRENDERE PESO:
+        </h3>
+
+        <p>
+          Per aumentare di peso devi consumare ogni giorno
+          <span id="ganhar_peso"></span> cal
+        </p>
+
+        <h3 class="x-padd">
+          PERDERE PESO:
+        </h3>
+
+        <p>
+          Per perdere peso è necessario consumare fino a
+          <span id="perder_peso"></span> cal
+        </p>
       </div>
-    </main>
-    <footer>
+    </div>
+  </main>
+  <footer>
     <div class="rodape">
-      <h4>Riferimenti</h4>
-      <div class="rodape">
-        <h4>Referencias</h4>
+      <div class="rodape text-left">
+        <h4 class="text-center">RIFERIMENTI</h4>
         <ul>
           <li>
-            <a href="https://www.leighpeele.com/mifflin-st-jeor-calculator"
-              ><i class="material-icons">article</i>Come viene calcolato</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.scielo.br/pdf/abcd/v29n3/pt_0102-6720-abcd-29-03-00185.pdf"
-              ><i class="material-icons">article</i>Importanza dell'equazione di Harris-BENEDICT
+            <a href="https://github.com/adalbertobrant/metabolismobasal/graphs/contributors"><i
+                class="material-icons">article</i>Contributori
             </a>
           </li>
           <li>
-            <a
-              href="https://github.com/adalbertobrant/metabolismobasal/graphs/contributors"
-              ><i class="material-icons">article</i>Contributori
-              ><i class="material-icons">article</i>Importanza dell'equazione di
-              Harris-BENEDICT
+            <a href="https://www.leighpeele.com/mifflin-st-jeor-calculator"><i class="material-icons">article</i>Come viene calcolato</a>
+          </li>
+          <li>
+            <a href="https://www.scielo.br/pdf/abcd/v29n3/pt_0102-6720-abcd-29-03-00185.pdf"><i
+                class="material-icons">article</i>Importanza dell'equazione di
+                Harris-BENEDICT
             </a>
           </li>
         </ul>
-        <div class="lan-bar">
-          <a href="index.html" class="lan-item" target="_blank" title="Behance"
-            >PT</a
-          >
 
-          <a
-            href="index_ES.html"
-            class="lan-item"
-            target="_blank"
-            title="Behance"
-          >
-            ES
-          </a>
-          <a
-            href="index_it.html"
-            class="lan-item"
-            target="_blank"
-            title="Behance"
-            >IT</a
-          >
+        <div class="lan-bar">
+          <a href="../../index.html" class="lan-item" target="_blank" title="PT">PT</a>
+          <a href="./index_ES.html" class="lan-item" target="_blank" title="ES">ES</a>
+          <a href="./index_it.html" class="lan-item" target="_blank" title="IT">IT</a>
+          <a href="./index_en.html" class="lan-item" target="_blank" title="EN">EN</a>
         </div>
       </div>
-    </footer>
-  </body>
+  </footer>
+</body>
+
 </html>
