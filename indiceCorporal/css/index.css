@@ -1,1 +1,95 @@
-// Escreva aqui o css
+:root {
+  --purple: #322153;
+  --bg-body-color: #f0f0f5;
+  --bg-form-color: #ffffff;
+}
+
+body {
+  background: var(--bg-body-color);
+  font-family: "Ubuntu", sans-serif;
+  color: #322153;
+  max-width: 90vw;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+header h1.title {
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: center;
+  color: #322153;
+}
+
+.tabs-st li a {
+  color: #322153;
+  font-weight: bold;
+}
+
+.beauty-shadow {
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb;
+}
+
+.button-calc {
+  cursor: pointer;
+  display: block;
+  border: none;
+  padding: 14.5px 29px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  background-color: #34cb79;
+  margin: 0.4rem auto;
+  transition: 0.3s all;
+  outline: 0;
+}
+
+.button-calc:hover {
+  background-color: var(--purple);
+  transition: 500ms;
+}
+
+.button-calc:focus {
+  outline: none !important;
+}
+
+.x-padd {
+  padding: 10px 0 0 0;
+}
+
+.list span {
+  color: #322153;
+  font-weight: bold;
+}
+
+.list span,
+.list li {
+  display: flex;
+  justify-content: left;
+  text-align: center;
+}
+
+.row label {
+  font-size: 2rem;
+}
+
+.field div input {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 10px 5px;
+  border: none;
+}
+
+.field div input:focus {
+  outline: none !important;
+  border: 2px solid #322153;
+  box-shadow: none;
+}
