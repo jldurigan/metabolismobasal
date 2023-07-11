@@ -36,7 +36,7 @@ function seleciona(id) {
   return select.options[select.selectedIndex].value;
 }
 
-/* função para calcular a taxa metabólica basal e o nível de calorias necessárias 
+/* função para calcular a taxa metabólica basal e o nível de calorias necessárias
 de acordo com a prática esportiva*/
 function calcTMB(peso, idade, altura, genero) {
   const res =
@@ -54,4 +54,14 @@ function calcTMB(peso, idade, altura, genero) {
     perderPeso: res - 450,
   };
   return resData;
+}
+
+function calcIMC(peso, altura) {
+  if (peso <= 0 || altura <= 0) {
+    return null;
+  }
+
+  const alturaMetros = altura / 100;
+  const imc = peso / (alturaMetros * alturaMetros);
+  return imc.toFixed(2);
 }
