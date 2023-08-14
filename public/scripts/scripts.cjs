@@ -63,5 +63,8 @@ function calcIMC(peso, altura) {
 
   const alturaMetros = altura / 100;
   const imc = peso / (alturaMetros * alturaMetros);
+  console.log(imc)
   return imc.toFixed(2);
 }
+
+module.exports = { calcIMC,calcTMB }
