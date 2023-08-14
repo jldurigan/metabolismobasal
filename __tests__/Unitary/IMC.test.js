@@ -1,4 +1,5 @@
 const { calcIMC, calcTMB } = require('../../public/scripts/scripts.cjs')
+const { calcTabelaIMC } = require('../../public/scripts/scripts_PT.cjs')
 
 // Testes
 describe('calcIMC', () => {
@@ -16,8 +17,13 @@ describe('calcIMC', () => {
     const imc = calcIMC(-70, 175)
     expect(imc).toBeNull()
   })
-  test('aplicação não permite valores nulos 2', () => {
+  test('aplicação que retorna o resultado dos calculos do TMB', () => {
     const tmb = calcTMB(70,21,171,'Masculino')
-    expect(tmb.ativo).toBe(1668.75)
+    expect(tmb.ativo).toBe(2878.59375)
+  })
+
+  test('aplicação que retorna o resultado das tabelas do IMC', () => {
+    const resultTabelaIMC = calcTabelaIMC(27)
+    expect(resultTabelaIMC).toBe('Sobrepeso')
   })
 })
