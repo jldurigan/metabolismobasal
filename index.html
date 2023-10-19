@@ -14,15 +14,24 @@
   <link rel="stylesheet" type="text/css" href="public/styles/style.css" />
   <link rel="icon" href="./public/images/favicon.png" />
   <script src="./public/scripts/scripts.js"></script>
+  <script src="./public/scripts/shared.js"></script>
 </head>
 
 <body lang="pt-br">
 
   <div class="lan-bar-top">
-    <a href="./index.html" class="lan-item" target="_blank" title="PT">PT</a>
-    <a href="./public/pages/index_ES.html" class="lan-item" target="_blank" title="ES">ES</a>
-    <a href="./public/pages/index_it.html" class="lan-item" target="_blank" title="IT">IT</a>
-    <a href="./public/pages/index_en.html" class="lan-item" target="_blank" title="EN">EN</a>
+    <div class="custom-dropdown">
+      <div class="dropdown-header" onclick="toggleDropdown()">
+        <span>Idioma: </span>
+        <img src="./public/images/flag-br.png">
+      </div>
+      <ul class="dropdown-list">
+        <li><a href="./index.html" target="_blank" title="PT"><img src="./public/images/flag-br.png"></a></li>
+        <li><a href="./public/pages/index_ES.html" target="_blank" title="ES"><img src="./public/images/flag-es.png"></a></li>
+        <li><a href="./public/pages/index_it.html" target="_blank" title="IT"><img src="./public/images/flag-it.png"></a></li>
+        <li><a href="./public/pages/index_en.html" target="_blank" title="EN"><img src="./public/images/flag-us.png"></a></li>
+      </ul>
+    </div>
   </div>
 
   <header>
