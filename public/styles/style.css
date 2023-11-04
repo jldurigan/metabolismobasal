@@ -345,23 +345,4 @@ footer ul li a:hover {
     width: 100%;
     margin: 15px 0;
   }
-
-  .lan-bar-top.open {
-    position: sticky;
-    top: 20%;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0);
-    z-index: 2;
-  }
-
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
 }
