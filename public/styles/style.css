@@ -32,6 +32,10 @@ img {
   max-width: 100%;
 }
 
+.flag {
+  margin: 0 auto;
+}
+
 .lan-bar-top {
   position: sticky;
   top: 0;
@@ -182,7 +186,7 @@ form.form .field-btn {
 .custom-dropdown {
   position: relative;
   display: inline-block;
-  max-width: 70px;
+  max-width: 90px;
   background: var(--bg-body-color);
 }
 
@@ -195,6 +199,7 @@ form.form .field-btn {
 }
 
 .dropdown-list {
+  width: 100%;
   display: none;
   position: absolute;
   list-style: none;
