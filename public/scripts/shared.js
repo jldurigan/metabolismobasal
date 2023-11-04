@@ -1,18 +1,20 @@
-var dropdownList = document.querySelector('.dropdown-list');
-var customDropdown = document.querySelector('.custom-dropdown');
-var dropdownHeader = document.querySelector('.dropdown-header');
-var lanBarTop = document.querySelector('.lan-bar-top');
-var overlay = document.querySelector('.overlay');
+function Inicializar(){
+  const dropdownList = document.querySelector('.dropdown-list');
+  const customDropdown = document.querySelector('.custom-dropdown');
+  const dropdownHeader = document.querySelector('.dropdown-header');
+  const lanBarTop = document.querySelector('.lan-bar-top');
+  const overlay = document.querySelector('.overlay');
 
-document.addEventListener("click", function (event) {
-  if (dropdownList.style.display === 'block' && !dropdownHeader.contains(event.target)) {
-    toggleDropdown();
-  }
-});
+  document.addEventListener("click", function (event) {
+    if (dropdownList.style.display === 'block' && !dropdownHeader.contains(event.target)) {
+      toggleDropdown(dropdownList, overlay, lanBarTop, customDropdown);
+    }
+  });
 
-dropdownHeader.addEventListener("click", toggleDropdown);
+  dropdownHeader.addEventListener("click", () => toggleDropdown(dropdownList, overlay, lanBarTop, customDropdown));
+}
 
-function toggleDropdown() {
+function toggleDropdown(dropdownList, overlay, lanBarTop, customDropdown) {
   if (dropdownList.style.display === 'block') {
     dropdownList.style.display = 'none';
     overlay.style.display = 'none';
